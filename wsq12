@@ -1,0 +1,26 @@
+#WSQ12-Greatest Common Divisor
+A=int(input("Give me a number: "))
+B=int(input("Give me another number: "))
+
+def GCD (A,B):
+    if (A>B) and (A%B==0):
+        print("The greatest common divisor is", B)
+
+    elif (A>B) and (A%B!=0):
+        while A%B!=0:
+            R=A%B
+            A=B
+            B=R
+        print("The greatest common divisor is", R)
+
+    elif (B>A) and (B%A==0):
+        print("The greatest common divisor is", A)
+
+    elif (B>A) and (B%A!=0):
+        while B%A!=0:
+            R=B%A
+            B=A
+            A=R
+        print("The greatest common divisor is", R)
+
+GCD(A,B)
