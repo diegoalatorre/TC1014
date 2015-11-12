@@ -1,0 +1,21 @@
+#WSQ03-Fun With Numbers
+numone=input("Say me a number: ")
+numone = int(numone)
+numtwo=input("Say me another number: ")
+numtwo = int(numtwo)
+print ("Say me if you want the difference (type 1), the product (type 2), the integer based division (type 3)")
+print ("or the remainder of integer division of the two numbers (type 4)")
+operation=input ("What do you want to do? ")
+operation = int(operation)
+if operation==1:
+    result1 = numone - numtwo
+    print("The difference of", numone, "and", numtwo, "is",result1)
+elif operation==2:
+    result2=(numone)*(numtwo)
+    print("The product of", numone, "and", numtwo, "is",result2)
+elif operation==3:
+    result3=numone//numtwo
+    print("The integer based division of", numone, "and", numtwo, "is",result3)
+elif operation==4:
+    result4=numone%numtwo
+    print("The remainder of the division of", numone, "and", numtwo, "is",result4)
