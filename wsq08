@@ -1,0 +1,38 @@
+#WSQ08-On to Functions
+numone=input("Say me a number: ")
+numone = int(numone)
+numtwo=input("Say me another number: ")
+numtwo = int(numtwo)
+
+print ("Say me if you want the difference (type 1), the product (type 2), the integer based division (type 3)")
+print ("or the remainder of integer division of the two numbers (type 4)")
+operation=input ("What do you want to do? ")
+operation = int(operation)
+
+def difference(numone, numtwo):
+    result1 = numone - numtwo
+    print("The difference of", numone, "and", numtwo, "is",result1)
+
+def product(numone, numtwo):
+    result2=(numone)*(numtwo)
+    print("The product of", numone, "and", numtwo, "is",result2)
+
+def integerbased(numone, numtwo):
+    result3=numone//numtwo
+    print("The integer based division of", numone, "and", numtwo, "is",result3)
+
+def remainder(numone, numtwo):
+    result4=numone%numtwo
+    print("The remainder of the division of", numone, "and", numtwo, "is",result4)
+
+if operation==1:
+    difference(numone,numtwo)
+
+elif operation==2:
+    product(numone, numtwo)
+
+elif operation==3:
+    integerbased(numone,numtwo)
+
+elif operation==4:
+    remainder(numone,numtwo)
