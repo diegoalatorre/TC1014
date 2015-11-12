@@ -1,0 +1,51 @@
+WSQ11-Yo soy 196
+natural=0
+palindrome=0
+lycherel=0
+
+a=input ("Give me the lower bound: ")
+b=input ("Give me the upper bound: ")
+a=int(a)
+b=int(b)
+
+totallist=[]
+for i in range (a,b+1):
+    totallist.append(i)
+
+lenght=len (totallist)
+n=0
+while (n!=lenght):
+    totallist[n]=str(totallist[n])
+    n = n+1
+
+for e in range (0,b):
+    x=totallist[e]
+    y=x[::-1]
+
+    if (x==y):
+        natural=natural + 1
+    elif (x[-1]=="0"):
+        palindrome=palindrome+1
+    else:
+
+        p=0
+        while ((x!=y) and (p!=30)):
+            x=int(x)
+            y=int(y)
+
+            x=x+y
+
+            x=str(x)
+            y=x[::-1]
+
+            if (x==y):
+                palindrome=palindrome+1
+            p=p+1
+
+        if ((x!=y) and (p>=30)):
+            lycherel=lycherel+1
+
+print ("Total numbers: ", lenght)
+print ("Natural palindromes: ", natural)
+print ("Non-lyrechel: ", palindrome)
+print ("Lyrechel candidates: ", lycherel)
