@@ -1,0 +1,15 @@
+#WSQ13-Babylonian Method
+
+def square_root(number):
+    attempt=number/2
+    difference = 99 # to ensure we enter the loop
+    final = 196 # just to declare it exists
+    while (difference > 0.000000001):
+        final=(0.5)*(attempt+number/attempt)
+        difference = abs(attempt-final)
+        attempt=final
+    return(final)
+
+number=float(input("Give me a number: "))
+answer = square_root(number)
+print(answer)
