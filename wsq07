@@ -1,0 +1,10 @@
+#WSQ07-Sum of Numbers
+print("We will calculate the sum of integers in the range you provide.")
+firstnumber=input("Give me the lower bound: ")
+firstnumber=int(firstnumber)
+secondnumber=input("Give me the bigger bound: ")
+secondnumber=int(secondnumber)+1
+suma=0
+for x in range(firstnumber,secondnumber):
+    suma=suma+x
+print("The sum of the integers in the range", firstnumber, "to", secondnumber-1, "is:", suma)
