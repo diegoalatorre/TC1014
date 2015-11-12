@@ -1,0 +1,21 @@
+#WSQ10-Lists
+numbers=[]
+
+for a in range (1,11):
+    a=float(input("Give me a number "))
+    numbers.append(a)
+
+sumnumbers=sum(numbers)
+length=len(numbers)
+average=sumnumbers/length
+
+stddev = 0
+for index in range(0,10):
+#Every element minus average
+    c = (average - numbers[index])
+    c = c ** 2
+    stddev = stddev + c
+
+standarddeviation=(stddev/(length-1))**0.5
+
+print ("The average of the numbers is", average, " the total is", sumnumbers,"the standard deviation is", standarddeviation)
