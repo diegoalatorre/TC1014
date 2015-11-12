@@ -1,0 +1,10 @@
+#WSQ05-Temperature
+F=input("What is the temperature in Fahrenheit? ")
+F=int(F)
+C=5*(F-32)/9
+C=int(C)
+print("A temperature of", F,"is", C,"in Celsius")
+if C>=100:
+    print ("Water does boil at this temperature (under typical conditions).")
+else:
+    print ("Water does not boil at this temperature (under typical conditions).")
