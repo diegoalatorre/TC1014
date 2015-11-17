@@ -1,0 +1,16 @@
+#WSQ14-Estimating e
+
+def calculate_e(precision):
+    n=1
+    first_limit=0.0
+    second_limit=1.0
+    while (abs(second_limit-first_limit)>precision):
+        second_limit=first_limit
+        first_limit=(1+1/n)**n
+        n=n+1
+    return(first_limit)
+
+
+precision=float (input("Give me the precision of 'e' you want? "))
+result=calculate_e(precision)
+print("The result is: ", result)
