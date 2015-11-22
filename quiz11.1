@@ -1,0 +1,17 @@
+#Quiz 11 Question 1
+from math import *
+
+def calculateE(accuracy):
+    first=1
+    second=0
+    final=0
+    while True:
+        e_constant=1/factorial(second)
+        second=second+1
+        final=final+e_constant
+        if(first<=(final+accuracy) and first>=(final-accuracy) and first!=1):
+            return(final)
+            break
+        first=final
+
+print(calculateE(.00000001))
