@@ -1,0 +1,13 @@
+#Quiz 11 Question 2
+
+def checkBanana(banana):
+    bananacounter=0
+    fil=open(banana)
+    read=fil.read()
+    words=read.split()
+    for i in words:
+        if (i=="banana"):
+            bananacounter=bananacounter+1
+    print("'banana' appears this time(s): ", bananacounter)
+
+checkBanana("quiz11.1.txt")
