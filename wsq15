@@ -1,0 +1,50 @@
+#WSQ15-Images
+from PIL import Image
+
+def rotate (image):
+    print("Write 90°, 180° or 270°")
+    girada=int(input("How many degrees do you want to rotate? "))
+
+    if girada==90:
+        girada1=reducida.rotate(Image.ROTATE_90)   # Obtener imagen girada 90º
+        girada1.show()
+        girada1.save(image)
+    elif girada==180:
+        girada2 = reducida.transpose(Image.ROTATE_180)   # Obtener imagen girada 180º
+        girada2.show()
+        girada2.save(image)
+    elif girada==270:
+        girada3 = reducida.transpose(Image.ROTATE_270)   # Obtener imagen girada 270º
+        girada3.show()
+        girada3.save(image)
+
+def flip(image):
+    print("Write Horizontal or Vertical")
+    volteada=input("Do you want to flip Horizontal or Vertical?")
+
+    if volteada=="Horizontal":
+        volteada1=reducida.transpose(Image.FLIP_TOP_BOTTOM)   # Voltear imagen de arriba a abajo
+        volteada1.show()
+        volteada1.save(image)
+    elif volteada=="Vertical":
+        volteada2=reducida.transpose(Image.FLIP_LEFT_RIGHT)   # Voltear imagen de izquierda a derecha
+        volteada2.show()
+        volteada2.save(image)
+
+def resize(image):
+    print("Write the position you want 'x' or 'y'")
+    cambiarx=int(input("Give me the x: "))
+    cambiary=int(input("Give me the y: "))
+    cambiar=reducida.resize(cambiarx, cambiary)
+    cambiar.show()
+    cambiar.save(image)
+
+image=input("Give me the image you want to edit: ")
+
+usersays=int(input("What do you want to do? (1) rotate (2) flip or (3) resize? "))
+if usersays==1:
+    rotate(image)
+elif usersays==2:
+    flip(image)
+elif usersays==3:
+    resize(image)
