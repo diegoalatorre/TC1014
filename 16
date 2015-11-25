@@ -1,0 +1,18 @@
+#WSQ16-Cars
+file=open("93cars.txt",'r')
+counter=0
+midrangetotal=0
+citympgtotal=0
+hwympgtotal=0
+for line in file:
+    if (counter%2 == 0):
+        midrangeprice=line[42:47]
+        citympg=line[52:55]
+        highwaympg=line[55:58]
+        midrangetotal=midrangetotal + float(midrangeprice)
+        citympgtotal=citympgtotal + int(citympg)
+        hwympgtotal=hwympgtotal + int(highwaympg)
+        counter=counter+1
+print("Midrange Average: ", midrangetotal / (counter/2))
+print("City MPG Average: ", citympgtotal / (counter/2))
+print("Highway MPG Average: ", hwympgtotal / (counter/2))
