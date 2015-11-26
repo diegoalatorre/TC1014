@@ -1,0 +1,19 @@
+#WSQ17-The Movies
+file=open("movies.txt",'r')
+movie_dictionary = dict()
+
+for line in file:
+    line=line.strip("\r\n")
+    line=line.split(", ")
+    
+    for i in range(0,(len(line)-1)):
+        
+        if line[i+1] not in movie_dictionary:
+            movie_dictionary[line[i+1]] = line[0]
+        
+        elif line[i+1] in movie_dictionary:
+            key = line[i+1]
+            movie_dictionary.setdefault(key, [])
+            movie_dictionary[key].append(line[0])
+    
+    print (movie_dictionary)
